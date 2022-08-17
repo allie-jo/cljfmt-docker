@@ -1,0 +1,3 @@
+[submodule "cljfmt"]
+	path = cljfmt
+	url = git@github.com:weavejester/cljfmt.git

@@ -2,14 +2,21 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+    branches:
+      - main
+      - 'releases/**'
+    tags:
+      - v*
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: allisoncasey327/cljfmt
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
 
@@ -35,4 +42,5 @@ jobs:
         with:
           push: true
           platforms: linux/arm64, linux/amd64
-          tags: allisoncasey327/cljfmt:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

@@ -13,7 +13,7 @@ RUN curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/l
     lein upgrade
 RUN lein native-image
 
-FROM alpine:3.16.2
+FROM fedora:36
 COPY --from=build /app/target/cljfmt /usr/bin/
 ENTRYPOINT ["/usr/bin/cljfmt"]
 CMD []

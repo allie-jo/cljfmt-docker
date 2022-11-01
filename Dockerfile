@@ -1,5 +1,5 @@
 FROM alpine/curl:3.14 as checkout
-ENV CLJFMT_VERSION=0.8.2
+ENV CLJFMT_VERSION=0.9.0
 RUN curl -L -s https://github.com/weavejester/cljfmt/archive/refs/tags/$CLJFMT_VERSION.tar.gz \
        | tar xvz -C /tmp \
     && mv /tmp/cljfmt-$CLJFMT_VERSION/cljfmt /app

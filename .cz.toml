@@ -1,6 +1,6 @@
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.8.2"
+version = "0.9.0"
 version_files = [
     ".cz.toml:version",
     "Dockerfile:CLJFMT_VERSION"

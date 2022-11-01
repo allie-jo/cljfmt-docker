@@ -3,6 +3,7 @@ name = "cz_conventional_commits"
 version = "0.9.0"
 version_files = [
     ".cz.toml:version",
-    "Dockerfile:CLJFMT_VERSION"
+    "Dockerfile:CLJFMT_VERSION",
+    ".pre-commit-hooks.yaml:entry"
 ]
 tag_format = "v$version"

@@ -4,5 +4,5 @@
   description: Runs cljfmt Docker image to lint clojure files
   language: docker_image
   types: [clojure]
-  entry: allisoncasey327/cljfmt:v0.9.1
+  entry: docker.io/allisoncasey327/cljfmt:v0.9.1
   args: [fix]
